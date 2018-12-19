@@ -1,0 +1,100 @@
+section.profile_section
+  .panel_title
+    h2 Configuración de Usuario
+    .save
+      a#see-car(href="#") Guardar
+      i.ion-lock-combination
+  .profile_wrapper
+    .tabs
+      ul
+        li.active 
+          i.ion-android-happy
+          h1  Personal
+        li 
+          i.ion-bag
+          h1  Compras
+        li 
+          i.ion-android-options
+          h1  Cuenta
+
+    .tabs_content
+      .tabs_content_profile.active
+        .tabs_wrapper_profile
+          form
+            .top_form
+              .image
+                img(src="https://images.unsplash.com/profile-fb-1485649729-9ad6da0a8efc.jpg?crop=faces&cs=tinysrgb&fit=crop&fm=jpg&h=150&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=150" width="150" height="150")
+              .main-field    
+                .field
+                  label Nombres:
+                  input(type="text" value="Omar Benjamin")
+                .field
+                  label Apellidos:
+                  input(type="text" value="Chagua Ramos")
+            .field
+              label Correo Electrónico:
+              input(type="email" value="benjamin0mar@hotmail.com")     
+            .field
+              label Telefono:
+              input(type="text" value="971755982") 
+            .field
+              label Locación:
+              input(type="text" value="Amarilis")         
+    
+      .tabs_content_profile
+        .tabs_wrapper_profile
+          table.table_story#table_story
+              tr
+                th
+                  h1 Producto
+                th
+                  h1 Precio Unidad
+                th
+                  h1 Precio
+                th               
+                  h1 Detalle
+              - for (var i = 0; i < 5; ++i) {
+                tr.item
+                  td
+                    .item_content
+                      img(src="assets/img/product#{i+2}.jpg" width="35")
+                      .product_name
+                        h2 Apple MacBook Pro
+                        small completada 
+                          i.ion-android-done
+                      
+                  td
+                    h2 S/. 3000.00  
+                  td
+                    h2 S/. 3000.00
+                  td
+                    a(href="#")
+                      i.ion-clipboard
+              - }         
+      .tabs_content_profile   
+        .tabs_wrapper_profile
+          form
+            .field
+              label Categorias de interes:
+              input(type="text" id="select_prefer" readonly="true")   
+              {% include select.html %} 
+            .box_check
+              label.custom_checkbox_wrapper
+                label.custom_checkbox
+                  input(type="checkbox")
+                  i.ion-android-checkbox
+                  i.ion-android-checkbox-outline-blank
+                h2 Recibir notificaciones al correo electronico sobre nuevos producto que puedan ser de mi interes.    
+          form    
+            .field
+              label Contraseña:
+              input(type="password") 
+            .field
+              label Nueva Contraseña:
+              input(type="password")   
+            .field
+              label Verificar Contraseña:
+              input(type="password")  
+            .delete_account
+              a(href="#") Eliminar mi cuenta  
+              i.ion-nuclear

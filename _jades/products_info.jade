@@ -1,0 +1,72 @@
+section.products_info_content
+  .products_info_wrapper
+    .tab_wrapper
+      .tab_wrapper_content    
+        aside.tab.active 
+          h2 Caracteristicas
+        aside.tab 
+          h2 Especificaciones
+        aside.tab 
+          h2 Comentarios
+      .add-content 
+        i.fa.fa-plus  
+    .info_content
+      .info_wrapper
+        .info_products.active
+          .info_products_char
+            .title_char
+              i.ion-wifi
+              h2 WIFI
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque labore sit aliquid? Velit.
+          .info_products_char
+            .title_char
+              i.ion-camera
+              h2 CAMARA
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque labore sit aliquid? Velit.
+          .info_products_char
+            .title_char
+              i.ion-bluetooth
+              h2 bluetooth
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque labore sit aliquid? Velit.
+          .info_products_char
+            .title_char
+              i.ion-mic-a
+              h2 microfono
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque labore sit aliquid? Velit.
+          .info_products_char
+            .title_char
+              i.ion-flash-off
+              h2 flash
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque labore sit aliquid? Velit.
+          .info_products_char
+            .title_char
+              i.ion-map
+              h2 GPS
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque labore sit aliquid? Velit.    
+        .info_products
+          table#char_table
+              - for (var i = 0; i < 5; ++i) {
+                tr.item
+                  td(width="120")
+                    h2 Procesador
+                  td
+                   h3 Intel® Celeron® Processor N3060 1.60GHZ
+              - }    
+                
+        .info_products
+          .valoracion_wrapper
+            .comment_wrapper 
+              .commet_box
+                img(src="https://images.unsplash.com/profile-fb-1485649729-9ad6da0a8efc.jpg?crop=faces&cs=tinysrgb&fit=crop&fm=jpg&h=150&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=150" width="45")
+                textarea( placeholder="Escribe tu opinion a cerca del producto...")
+              - for (var i = 0; i < 3; ++i) {
+                .commet_content
+                  img(src="https://images.unsplash.com/profile-fb-1485649729-9ad6da0a8efc.jpg?crop=faces&cs=tinysrgb&fit=crop&fm=jpg&h=150&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=150" width="30")
+                  .comment
+                    .name
+                      h2 usuario #{i}
+                      a(href="#")
+                        i.fa.fa-ellipsis-h
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas amet obcaecati laudantium a numquam sed sint soluta facere. Ipsum, doloremque molestias ratione tenetur, dolorum minus doloribus unde possimus quo officiis!   
+            
+              - } 

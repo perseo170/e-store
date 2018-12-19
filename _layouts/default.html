@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{ page.title }}</title>
+        <meta name="viewport" content="width=device-width">
+        <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cabin:700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:700" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+    </head>
+    <body>
+
+      {% include menu.html %}
+
+      <section class="seccions show_section" id="main">
+        {% include showcase.html %}
+        {% include products.html %}
+      </section>
+
+      <section class="seccions " id="admin">
+        {% include chart.html %}
+      </section>
+
+      <section class="seccions " id="pedidos">
+        {% include inbox.html %}
+      </section>
+
+      <section class="seccions " id="mensajes">
+        {% include messages.html %}
+      </section>
+
+      <section class="seccions " id="usuarios">
+        {% include users.html %}
+      </section>
+
+      <section class="seccions " id="stock">
+        {% include stock.html %}
+      </section>
+
+      <section class="seccions " id="offer_admin">
+        {% include offer_admin.html %}
+      </section>
+
+      <section class="seccions" id="producto">
+        {% include products_content.html %}
+        {% include products_info.html %}
+        {% include other_products.html %}
+      </section>
+
+      <section class="seccions" id="carrito">
+        {% include car.html %}
+      </section>
+
+      <section class="seccions" id="profile">
+        {% include profile.html %}
+      </section>
+
+      <section class="seccions" id="auth">
+        {% include auth.html %}
+      </section>
+
+      <section class="seccions" id="pay">
+        {% include pay.html %}
+      </section>
+
+      <section class="seccions" id="offer">
+        {% include offer.html %}
+      </section>
+      {% include chat.html %}
+      {% include footer.html %}
+
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script>
+    </script>
+    <script>
+    Chart.defaults.global.defaultFontFamily = "Quicksand";
+    var ctx = document.getElementById("myChart").getContext('2d');
+
+    var myChart = new Chart(ctx,
+    {
+    type: 'line',
+    data: {
+        labels: ["Lunes", "Martes", "Miercoles", "Jueves","Viernes", "Sabado", "Domingo"],
+        datasets: [{
+            data: ["1","2", "8","2", "3", "1", "3"],
+            backgroundColor: [
+                'rgba(43, 201, 226, 1)',
+            ],
+            borderColor: [
+                'rgba(255,255,255,1)',
+            ],
+            borderWidth: 1
+        },
+        {
+            data: ["3","2", "1","8", "3", "1", "1"],
+            backgroundColor: [
+                'rgba(168, 228, 238, .8)',
+            ],
+            borderColor: [
+                'rgba(255, 255, 255, 1)',
+            ],
+            borderWidth: 1
+        },
+        {
+            data: ["1","2", "3","2", "8", "2", "1"],
+            backgroundColor: [
+                'rgba(249, 226, 158, .8)',
+            ],
+            borderColor: [
+                'rgba(255, 255, 255, 1)',
+            ],
+            borderWidth: 1
+        }
+
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      legend: {
+          display: false
+      },
+      scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero:true,
+              fontSize: 14,
+              padding: -25
+            },
+            gridLines: {
+              color: "rgba(0, 0, 0, 0)",
+              offsetGridLines : false,
+            }
+          }],
+
+          xAxes: [{
+            ticks: {
+              fontSize: 14,
+              display: false,
+            },
+            gridLines: {
+              color: "rgba(0, 0, 0, 0)",
+              offsetGridLines : false,
+            }
+          }]
+
+      }
+    }
+  });
+    </script>
+</html>

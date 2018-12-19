@@ -1,0 +1,60 @@
+.admin_section
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  justify-content: space-between
+
+  .admin_content
+     width: calc(100% - 60px)
+     margin-left: 60px
+     background-color: white
+     transition: $transition
+  .menu_admin_section
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    width: 60px
+    position: fixed
+    left: 0
+    top: 50px
+    height: calc(100vh - 50px)
+    z-index: 5
+    box-sizing: border-box
+    .menu_admin_wrapper
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      width: 100%
+      ul
+        display: -webkit-flex
+        background-color: white
+        display: -ms-flex
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin: 0
+        width: 100%
+        position: relative
+        // z-index: 1
+        li.icons_menu_admin
+          margin: 0
+          list-style: none
+          width: 100%
+          font-family: $main-font
+          a
+            text-decoration: none 
+            span
+              text-decoration: none
+              width: 100%
+              padding: 15px 10px
+              box-sizing: border-box
+              display: -webkit-flex
+              display: -ms-flex
+              display: flex
+              justify-content: center
+              align-items: center
+              &:hover
+                background-color: rgba(128, 128, 128, 0.08)
+              i
+                font-size: 20px
+                color: $accent-color

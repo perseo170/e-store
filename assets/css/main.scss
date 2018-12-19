@@ -1,0 +1,225 @@
+@import "0-tools/reset";
+@import "0-tools/var";
+@import "1-modules/home";
+@import "1-modules/menu";
+@import "1-modules/products";
+@import "1-modules/footer";
+@import "1-modules/products_content";
+@import "1-modules/products_info";
+@import "1-modules/car";
+@import "1-modules/profile";
+@import "1-modules/auth";
+@import "1-modules/pay";
+@import "1-modules/offer";
+@import "1-modules/select";
+@import "1-modules/chat";
+@import "1-modules/menu_admin";
+@import "1-modules/chart";
+@import "1-modules/inbox";
+@import "1-modules/messages";
+@import "1-modules/users";
+@import "1-modules/stock";
+@import "1-modules/offer_admin";
+
+
+// NOTE: input number styling
+
+.quantity {
+  position: relative;
+  margin-right: 10px;
+  box-shadow: $shadow;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number]
+{
+  -moz-appearance: textfield;
+}
+
+.quantity input {
+  font-family: $main-font;
+  width: 50px;
+  height: 45px;
+  line-height: 1.65;
+  float: left;
+  display: block;
+  padding: 0;
+  margin: 0;
+  padding-left: 20px;
+  border: 1px solid #eee;
+  background-color: #2196F3;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 3px;
+}
+
+.quantity input:focus {
+  outline: 0;
+}
+
+.quantity-nav {
+  float: left;
+  position: relative;
+  height: 45px;
+}
+
+.quantity-button {
+  position: relative;
+  cursor: pointer;
+  border-left: 1px solid #eee;
+  width: 20px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  font-family: $main-font;
+  line-height: 1.7;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.quantity-button.quantity-up {
+  position: absolute;
+  height: 50%;
+  top: 0;
+  border-bottom: 1px solid #eee;
+}
+
+.quantity-button.quantity-down {
+  position: absolute;
+  bottom: -1px;
+  height: 50%;
+}
+
+// NOTE: input files
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.inputfile:active, .inputfile:focus, .inputfile:visited {
+    outline: none !important;
+}
+.file-content{
+  font-family: $main-font;
+  display: flex !important;
+  justify-content: space-between;
+  // border: 1px solid #bdbdbd !important;
+  background-color: #ffffff !important;
+  margin-bottom: 0 !important  ;
+}
+.file-content:focus{
+  outline: none !important;
+}
+
+.inputfile + label {
+    width: 100%;
+    font-size: 15px;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-family: 'Hind', sans-serif;
+}
+
+.no-js .inputfile + label {
+    display: none;
+}
+
+
+
+
+.inputfile + label i {
+    font-size: 20px;
+}
+
+
+/* style 6 */
+
+.inputfile-6 + label {
+    color: #242529;
+    padding: 10px 0px;
+}
+
+.inputfile-6 + label {
+    border: 1px solid rgba($accent-color, .25);
+    // background-color: white;
+    padding: 10px 0;
+    border-radius: 2px;
+}
+
+.inputfile-6 + label {
+  &:active, &:focus, &:visited{
+    border: 1px solid rgba(#2196F3, 1)
+  }
+}
+
+.inputfile-6:focus + label,
+.inputfile-6.has-focus + label,
+.inputfile-6 + label:hover {
+    // border-color: #722040;
+}
+
+.inputfile-6 + label span,
+.inputfile-6 + label strong {
+    padding: 0px 10px
+}
+
+.inputfile-6 + label span {
+    width: 200px;
+    // min-height: 2em;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: top;
+    font-family: 'Source Sans Pro', sans-serif !important;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.inputfile-6 + label strong {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  height: 100%;
+  color: $accent-color;
+  font-family: $main-font;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 13px;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  width: 20px;
+}
+
+@media (max-width: 1120px ) {
+  .label-file{
+    display: none;
+  }
+  .inputfile + label svg {
+      margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 50em) {
+	.inputfile-6 + label strong {
+		display: block;
+	}
+}
